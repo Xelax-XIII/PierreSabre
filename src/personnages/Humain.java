@@ -26,12 +26,12 @@ public class Humain {
 		speak("Mmmm, un bon verre de "+favoriteDrink+" ! GLOUPS !");
 	}
 	
-	private boolean gainMoney(int gain) {
+	protected boolean gainMoney(int gain) {
 		money += gain;
 		return true;
 	}
 	
-	private boolean looseMoney(int loss) {
+	protected boolean looseMoney(int loss) {
 		if (money - loss < 0) {
 			return false;
 		} else {
@@ -48,7 +48,7 @@ public class Humain {
 		}
 	}
 	
-	private void speak(String text) {
+	protected void speak(String text) {
 		System.out.println("("+name+") - "+text);
 	}
 }
