@@ -67,7 +67,7 @@ public class Human {
 		memorize(otherHuman);
 	}
 	
-	private void memorize(Human otherHuman) {
+	protected void memorize(Human otherHuman) {
 		memory[nbMemory] = otherHuman;
 		nbMemory++;
 		nbMemory = nbMemory % MAXIMUM_MEMORY;

@@ -1,6 +1,7 @@
 package histoire;
 
 import personnages.Commercant;
+import personnages.GrandMother;
 import personnages.Human;
 import personnages.Yakuza;
 import personnages.Ronin;
@@ -14,16 +15,16 @@ public class HistoireTP5 {
 		Commercant kumi = new Commercant("Kumi", 10);
 		Yakuza yaku = new Yakuza("Yaku Le Noir", "whisky", 30, "Warsong");
 		Ronin roro = new Ronin("Roro", "shochu", 60);
-		marco.meet(roro);
-		marco.meet(yaku);
-		marco.meet(chonin);
-		marco.meet(kumi);
-		marco.listMemory();
-		roro.listMemory();
-		yaku.listMemory();
+//		marco.meet(roro);
+//		marco.meet(yaku);
+//		marco.meet(chonin);
+//		marco.meet(kumi);
+//		marco.listMemory();
+//		roro.listMemory();
+//		yaku.listMemory();
 		Samourai akimoto = new Samourai("Akimoto", "saké", 80, "Miyamoto");
-		akimoto.meet(marco);
-		akimoto.listMemory();
+//		akimoto.meet(marco);
+//		akimoto.listMemory();
 		Traitor masako = new Traitor("Masako", "whisky", 100, "Miyamoto");
 //		masako.meet(marco);
 //		masako.meet(chonin);
@@ -31,15 +32,22 @@ public class HistoireTP5 {
 //		masako.meet(yaku);
 //		masako.meet(roro);
 //		masako.meet(akimoto);
-		masako.beNice();
-		masako.ransom(kumi);
-		masako.ransom(chonin);
-		masako.ransom(marco);
-		akimoto.meet(masako);
-		masako.ransom(kumi);
-		masako.meet(yaku);
-		masako.beNice();
-		masako.meet(roro);
-		System.out.println("salut");
+//		masako.beNice();
+//		masako.ransom(kumi);
+//		masako.ransom(chonin);
+//		masako.ransom(marco);
+//		akimoto.meet(masako);
+//		masako.ransom(kumi);
+//		masako.meet(yaku);
+//		masako.beNice();
+//		masako.meet(roro);
+		GrandMother grandMere = new GrandMother("Grand-Mere", 10);
+		grandMere.meet(akimoto);
+		grandMere.meet(yaku);
+		grandMere.meet(masako);
+		grandMere.meet(kumi);
+		grandMere.meet(marco);
+		grandMere.meet(chonin);
+		grandMere.ragoter();
 	}
 }
