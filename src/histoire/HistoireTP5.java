@@ -4,6 +4,7 @@ import personnages.Commercant;
 import personnages.Human;
 import personnages.Yakuza;
 import personnages.Ronin;
+import personnages.Samurai;
 
 public class HistoireTP5 {
 	public static void main(String[] args) {
@@ -19,6 +20,9 @@ public class HistoireTP5 {
 		marco.listMemory();
 		roro.listMemory();
 		yaku.listMemory();
+		Samurai akimoto = new Samurai("Akimoto", "saké", 80, "Miyamoto");
+		akimoto.meet(marco);
+		akimoto.listMemory();
 		System.out.println("salut");
 	}
 }
