@@ -4,7 +4,7 @@ public class Human {
 	private String name;
 	private String favoriteDrink;
 	private int money;
-	private Human memory[] = new Human[MAXIMUM_MEMORY];
+	protected Human[] memory = new Human[MAXIMUM_MEMORY];
 	protected int nbMemory=0;
 	
 	static final int MAXIMUM_MEMORY=30;
