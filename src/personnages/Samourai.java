@@ -1,9 +1,9 @@
 package personnages;
 
-public class Samurai extends Ronin{
+public class Samourai extends Ronin{
 	private String lordName;
 	
-	public Samurai(String name, String favoriteDrink, int money, String lordName) {
+	public Samourai(String name, String favoriteDrink, int money, String lordName) {
 		super(name, favoriteDrink, money);
 		this.lordName = lordName;
 	}
