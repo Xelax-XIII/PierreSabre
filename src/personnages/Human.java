@@ -64,7 +64,6 @@ public class Human {
 	}
 	
 	private void respond(Human otherHuman) {
-		sayHello();
 		memorize(otherHuman);
 	}
 	
