@@ -1,6 +1,6 @@
 package personnages;
 
-public class Yakuza extends Humain {
+public class Yakuza extends Human {
 	private int reputation=4;
 	private String clan;
 	

@@ -1,6 +1,6 @@
 package personnages;
 
-public class Ronin extends Humain {
+public class Ronin extends Human {
 	private int honor = 1;
 
 	public Ronin(String name, String favoriteDrink, int money) {

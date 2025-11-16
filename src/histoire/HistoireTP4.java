@@ -1,13 +1,13 @@
 package histoire;
 
 import personnages.Commercant;
-import personnages.Humain;
+import personnages.Human;
 import personnages.Yakuza;
 import personnages.Ronin;
 
 public class HistoireTP4 {
 	public static void main(String[] args) {
-		Humain prof = new Humain("Prof", "kombucha", 54);
+		Human prof = new Human("Prof", "kombucha", 54);
 		prof.sayHello();
 		prof.buy("une boisson", 12);
 		prof.drink();

@@ -1,11 +1,15 @@
 package personnages;
 
-public class Humain {
+public class Human {
 	private String name;
 	private String favoriteDrink;
 	private int money;
+	private Human memory[] = new Human[MAXIMUM_MEMORY];
+	protected int nbMemory=0;
 	
-	public Humain(String name, String favoriteDrink, int money) {
+	static final int MAXIMUM_MEMORY=30;
+	
+	public Human(String name, String favoriteDrink, int money) {
 		this.name = name;
 		this.favoriteDrink = favoriteDrink;
 		this.money = money;
@@ -50,5 +54,33 @@ public class Humain {
 	
 	protected void speak(String text) {
 		System.out.println("("+name+") - "+text);
+	}
+	
+	public void meet(Human otherHuman) {
+		sayHello();
+		otherHuman.sayHello();
+		otherHuman.respond(this);
+		memorize(otherHuman);
+	}
+	
+	private void respond(Human otherHuman) {
+		sayHello();
+		memorize(otherHuman);
+	}
+	
+	private void memorize(Human otherHuman) {
+		memory[nbMemory] = otherHuman;
+		nbMemory++;
+		nbMemory = nbMemory % MAXIMUM_MEMORY;
+	}
+	
+	public void listMemory() {
+		String result="";
+		for (int i = 0; i < MAXIMUM_MEMORY; i++) {
+			if (memory[i] != null) {
+				result += memory[i].getName() + " ";
+			}
+		}
+		speak("Je connais beaucoup de monde dont : "+result);
 	}
 }
