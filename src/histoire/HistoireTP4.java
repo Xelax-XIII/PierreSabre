@@ -24,6 +24,7 @@ public class HistoireTP4 {
 		Ronin roro = new Ronin("Roro", "shochu", 60);
 		roro.sayHello();
 		roro.give(marco);
+		roro.provoke(yaku);
 		System.out.println("salut");
 	}
 }
